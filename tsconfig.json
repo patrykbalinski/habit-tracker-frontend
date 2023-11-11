@@ -1,8 +1,17 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "baseUrl": "./src",
+    "paths": {
+      "@habit-occurrence-adder/*" : ["app/features/habit-occurrence-adder/*"],
+      "@habits/*" : ["app/features/habits/*"],
+      "@habits-editor/*" : ["app/features/habits-editor/*"],
+      "@habits-statistics/*" : ["app/features/habits-statistics/*"],
+      "@issue-reporter/*" : ["app/features/issue-reporter/*"],
+      "@settings/*" : ["app/features/settings/*"],
+      "@navigation/*": ["app/features/navigation/*"]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
