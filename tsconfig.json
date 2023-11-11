@@ -13,7 +13,7 @@
       "@navigation/*": ["app/features/navigation/*"]
     },
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

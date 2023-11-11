@@ -1,0 +1,4 @@
+<span>{{ habit.name }}</span>
+<span>{{ habit.hours }}</span>
+<button (click)="edit.emit(habit.id)">edit</button>
+<button (click)="addOccurrence.emit(habit.id)">add occurrence</button>

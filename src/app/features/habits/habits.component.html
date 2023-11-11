@@ -1,1 +1,6 @@
-<p>habits works!</p>
+<app-habit
+  *ngFor="let habit of habitsStorage.habits$ | async"
+  [habit]="habit"
+  (edit)="editHabit($event)"
+  (addOccurrence)="addHabitOccurrence($event)">
+</app-habit>
