@@ -10,7 +10,7 @@ import { RouterLink } from "@angular/router";
     RouterLink
   ],
   templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss'
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
 

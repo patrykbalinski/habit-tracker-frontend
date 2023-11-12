@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './habit-occurrence-adder.component.html',
-  styleUrl: './habit-occurrence-adder.component.scss'
+  styleUrls: ['./habit-occurrence-adder.component.scss']
 })
 export class HabitOccurrenceAdderComponent {
 

@@ -7,7 +7,7 @@ import {Habit} from "@habits/interfaces/habit";
   imports: [CommonModule],
   selector: 'app-habit',
   templateUrl: './habit.component.html',
-  styleUrl: './habit.component.scss'
+  styleUrls: ['./habit.component.scss']
 })
 export class HabitComponent {
 

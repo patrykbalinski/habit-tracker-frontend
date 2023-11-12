@@ -20,7 +20,7 @@ import { TranslateModule } from "@ngx-translate/core";
   ],
   selector: 'app-habits',
   templateUrl: './habits.component.html',
-  styleUrl: './habits.component.scss'
+  styleUrls: ['./habits.component.scss']
 })
 export class HabitsComponent implements OnInit{
 

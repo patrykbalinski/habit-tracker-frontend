@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './habits-statistics.component.html',
-  styleUrl: './habits-statistics.component.scss'
+  styleUrls: ['./habits-statistics.component.scss']
 })
 export class HabitsStatisticsComponent {
 

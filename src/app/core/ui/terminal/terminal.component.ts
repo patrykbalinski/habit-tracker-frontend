@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './terminal.component.html',
-  styleUrl: './terminal.component.scss'
+  styleUrls: ['./terminal.component.scss']
 })
 export class TerminalComponent {
 
