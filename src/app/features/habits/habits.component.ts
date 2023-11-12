@@ -5,12 +5,14 @@ import { HabitsStorageService } from "@habits/data-access/habits-storage.service
 import { HabitComponent } from "@habits/ui/habit/habit.component";
 import { Habit } from "@habits/interfaces/habit";
 import { Router } from "@angular/router";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   standalone: true,
   imports: [
     CommonModule,
-    HabitComponent
+    HabitComponent,
+    TranslateModule
   ],
   providers: [
     ApiHabitsService,
