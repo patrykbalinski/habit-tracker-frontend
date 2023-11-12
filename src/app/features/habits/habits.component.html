@@ -6,3 +6,9 @@
 </app-habit>
 
 <p>{{ 'test.key' | translate }}</p>
+
+<button (click)="toast.showSuccess('success', 'Success Message')">show success</button>
+<button (click)="toast.showError('error', 'Error Message')">show error</button>
+<button (click)="toast.showInfo('info', 'Info Message')">show info</button>
+<button (click)="toast.showWarning('warning', 'Warning Message')">show warning</button>
+<p-toast></p-toast>

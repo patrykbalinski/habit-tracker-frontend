@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet} from '@angular/router';
 import { NavigationComponent } from "@navigation/navigation.component";
 import { TranslationsService } from "./core/services/translations.service";
+import { MessageService } from "primeng/api";
 
 @Component({
   standalone: true,
@@ -10,6 +11,9 @@ import { TranslationsService } from "./core/services/translations.service";
     CommonModule,
     RouterOutlet,
     NavigationComponent
+  ],
+  providers: [
+    MessageService
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
