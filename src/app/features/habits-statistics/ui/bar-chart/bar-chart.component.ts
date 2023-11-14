@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartModule } from 'primeng/chart';
 
@@ -13,6 +13,10 @@ export class BarChartComponent implements OnInit {
   basicData: any;
   basicOptions: any;
 
+  @Input({ required: true }) labels: String[];
+  @Input({ required: true }) data: Number[];
+  @Input({ required: true }) title: String;
+
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
@@ -22,11 +26,11 @@ export class BarChartComponent implements OnInit {
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
     this.basicData = {
-      labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+      labels: this.labels,
       datasets: [
         {
-          label: 'Sales',
-          data: [540, 325, 702, 620],
+          label: this.title,
+          data: this.data,
           backgroundColor: [
             'rgba(255, 159, 64, 0.2)',
             'rgba(75, 192, 192, 0.2)',

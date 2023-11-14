@@ -10,4 +10,8 @@ import { RadarChartComponent } from './ui/radar-chart/radar-chart.component';
   templateUrl: './habits-statistics.component.html',
   styleUrls: ['./habits-statistics.component.scss'],
 })
-export class HabitsStatisticsComponent {}
+export class HabitsStatisticsComponent {
+  barTitle = 'Sales';
+  barLabels = ['Q1', 'Q2', 'Q3', 'Q4'];
+  barData = [540, 325, 702, 620];
+}
