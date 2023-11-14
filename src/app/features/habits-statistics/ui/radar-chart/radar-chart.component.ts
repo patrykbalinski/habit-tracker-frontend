@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartModule } from 'primeng/chart';
 
@@ -10,8 +10,14 @@ import { ChartModule } from 'primeng/chart';
   styleUrls: ['./radar-chart.component.scss'],
 })
 export class RadarChartComponent implements OnInit {
-  data: any;
-  options: any;
+  basicData: any;
+  basicOptions: any;
+
+  @Input({ required: true }) labels: String[];
+  @Input({ required: true }) dataset_value_1: Number[];
+  @Input({ required: true }) dataset_name_1: String;
+  @Input({ required: true }) dataset_value_2: Number[];
+  @Input({ required: true }) dataset_name_2: String;
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
@@ -20,19 +26,11 @@ export class RadarChartComponent implements OnInit {
       '--text-color-secondary'
     );
 
-    this.data = {
-      labels: [
-        'Eating',
-        'Drinking',
-        'Sleeping',
-        'Designing',
-        'Coding',
-        'Cycling',
-        'Running',
-      ],
+    this.basicData = {
+      labels: this.labels,
       datasets: [
         {
-          label: 'My First dataset',
+          label: this.dataset_name_1,
           borderColor: documentStyle.getPropertyValue('--bluegray-400'),
           pointBackgroundColor:
             documentStyle.getPropertyValue('--bluegray-400'),
@@ -40,21 +38,21 @@ export class RadarChartComponent implements OnInit {
           pointHoverBackgroundColor: textColor,
           pointHoverBorderColor:
             documentStyle.getPropertyValue('--bluegray-400'),
-          data: [65, 59, 90, 81, 56, 55, 40],
+          data: this.dataset_value_1,
         },
         {
-          label: 'My Second dataset',
+          label: this.dataset_name_2,
           borderColor: documentStyle.getPropertyValue('--pink-400'),
           pointBackgroundColor: documentStyle.getPropertyValue('--pink-400'),
           pointBorderColor: documentStyle.getPropertyValue('--pink-400'),
           pointHoverBackgroundColor: textColor,
           pointHoverBorderColor: documentStyle.getPropertyValue('--pink-400'),
-          data: [28, 48, 40, 19, 96, 27, 100],
+          data: this.dataset_value_2,
         },
       ],
     };
 
-    this.options = {
+    this.basicOptions = {
       plugins: {
         legend: {
           labels: {

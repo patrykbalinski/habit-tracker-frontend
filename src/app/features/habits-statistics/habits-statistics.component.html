@@ -1,7 +1,14 @@
 <app-bar-chart
-  [labels]="barLabels"
-  [dataset_name]="barTitle"
-  [dataset_value]="barData"
+  [labels]="bar_labels"
+  [dataset_name]="bar_dataset_name"
+  [dataset_value]="bar_dataset_value"
 ></app-bar-chart>
 
-<app-radar-chart></app-radar-chart>
+<app-radar-chart
+  [labels]="radar_labels"
+  [dataset_name_1]="radar_dataset_name_1"
+  [dataset_name_2]="radar_dataset_name_2"
+  [dataset_value_1]="radar_dataset_value_1"
+  [dataset_value_2]="radar_dataset_value_2"
+>
+</app-radar-chart>
