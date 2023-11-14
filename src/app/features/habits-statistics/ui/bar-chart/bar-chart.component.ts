@@ -14,8 +14,8 @@ export class BarChartComponent implements OnInit {
   basicOptions: any;
 
   @Input({ required: true }) labels: String[];
-  @Input({ required: true }) data: Number[];
-  @Input({ required: true }) title: String;
+  @Input({ required: true }) dataset_value: Number[];
+  @Input({ required: true }) dataset_name: String;
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
@@ -29,8 +29,8 @@ export class BarChartComponent implements OnInit {
       labels: this.labels,
       datasets: [
         {
-          label: this.title,
-          data: this.data,
+          label: this.dataset_name,
+          data: this.dataset_value,
           backgroundColor: [
             'rgba(255, 159, 64, 0.2)',
             'rgba(75, 192, 192, 0.2)',
