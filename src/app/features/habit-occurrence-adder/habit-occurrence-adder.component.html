@@ -1,1 +1,15 @@
-<p>habit-occurrence-adder works!</p>
+<div>
+  <p>{{habitName}}</p>
+  <form [formGroup]="form">
+    <div>
+      <label htmlFor="startDate">Start</label>
+      <p-calendar dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="startDate"></p-calendar>
+    </div>
+    <div>
+      <label htmlFor="endDate">End</label>
+      <p-calendar dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="endDate"></p-calendar>
+    </div>
+    <p-button [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
+    <p-button [label]="'button.add' | translate" styleClass="p-button-success"></p-button>
+  </form>
+</div>
