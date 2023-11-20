@@ -1,15 +1,15 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, ParamMap } from "@angular/router";
-import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
+import { ActivatedRoute } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
 import { ButtonModule } from "primeng/button";
 import { CalendarModule } from "primeng/calendar";
-import { FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { map } from "rxjs";
-import { HabitsStorageService } from "@habits/data-access/habits-storage.service";
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { InputTextModule } from "primeng/inputtext";
+import { DividerModule } from "primeng/divider";
+import { InputNumberModule } from "primeng/inputnumber";
+import { DropdownModule } from "primeng/dropdown";
 
-@UntilDestroy()
 @Component({
   standalone: true,
   imports: [
@@ -17,7 +17,11 @@ import { HabitsStorageService } from "@habits/data-access/habits-storage.service
     TranslateModule,
     ButtonModule,
     CalendarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputTextModule,
+    DividerModule,
+    InputNumberModule,
+    DropdownModule
   ],
   selector: 'app-habits-editor',
   templateUrl: './habits-editor.component.html',
@@ -26,27 +30,30 @@ import { HabitsStorageService } from "@habits/data-access/habits-storage.service
 export class HabitsEditorComponent implements OnInit {
 
   private activatedRoute: ActivatedRoute = inject(ActivatedRoute);
-  private habitsStorage: HabitsStorageService = inject(HabitsStorageService);
 
   public isEditMode: boolean = !!this.activatedRoute.snapshot.params['id'];
   public form: FormGroup;
-  public habitName: string;
+  public readonly goalFrequency: {name: string, code: string}[] = [
+    { name: 'daily', code: 'daily' },
+    { name: 'weekly', code: 'weekly' },
+    { name: 'monthly', code: 'monthly' }
+  ]
 
   public ngOnInit(): void {
     this.createForm();
-    this.initDataHandler();
   }
 
   private createForm(): void {
-    this.form = new FormGroup({})
+    this.form = new FormGroup({
+      name: new FormControl(null, [Validators.required]),
+      category: new FormControl(null, [Validators.required]),
+      goalHours: new FormControl(0, [Validators.required]),
+      goalMinutes: new FormControl(0, [Validators.required]),
+      goalFrequency: new FormControl(this.goalFrequency[0], [Validators.required])
+    })
   }
 
-  private initDataHandler(): void {
-    this.activatedRoute.paramMap.pipe(
-      map((params: ParamMap) => Number(params.get('id'))),
-      untilDestroyed(this)
-    ).subscribe((habitId: number) => {
-      this.habitName = this.habitsStorage.getHabitName(habitId);
-    })
+  public onUpdate(): void {
+    console.log(this.form.value);
   }
 }

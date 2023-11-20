@@ -1,7 +1,7 @@
 {
   "header": {
     "new-habit": "nowy nawyk",
-    "edit": "edycja",
+    "edit-habit": "edycja nawyku",
     "settings": "ustawienia",
     "report-issue": "zgłoś błąd"
   },
@@ -12,6 +12,18 @@
     "edit": "edytuj",
     "add": "dodaj",
     "add-occurrence": "dodaj wystąpienie"
+  },
+  "habit-editor": {
+    "name": "nazwa",
+    "category": "kategoria",
+    "goal-hours": "godziny",
+    "goal-minutes": "minuty",
+    "goal-frequency": "częstość",
+    "frequency": {
+      "daily": "dziennie",
+      "weekly": "tygodniowo",
+      "monthly": "miesięcznie"
+    }
   },
   "occurrence": {
     "start-date": "data początkowa",
