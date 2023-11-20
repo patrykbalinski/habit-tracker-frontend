@@ -11,7 +11,8 @@
       "@issue-reporter/*" : ["app/features/issue-reporter/*"],
       "@settings/*" : ["app/features/settings/*"],
       "@navigation/*": ["app/features/navigation/*"],
-      "@shared/*": ["app/shared/*"]
+      "@shared/*": ["app/shared/*"],
+      "@core/*": ["app/core/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": false,

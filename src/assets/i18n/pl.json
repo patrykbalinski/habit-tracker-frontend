@@ -1,3 +1,24 @@
 {
+  "header": {
+    "new-habit": "nowy nawyk",
+    "edit": "edycja",
+    "settings": "ustawienia",
+    "report-issue": "zgłoś błąd"
+  },
+  "button": {
+    "save": "zapisz",
+    "cancel": "anuluj",
+    "send": "wyślij",
+    "edit": "edytuj",
+    "add": "dodaj",
+    "add-occurrence": "dodaj wystąpienie"
+  },
+  "occurrence": {
+    "start-date": "data początkowa",
+    "end-date": "data końcowa"
+  },
+  "report": {
+    "message": "opis błędu"
+  },
   "test.key": "test-pl"
 }

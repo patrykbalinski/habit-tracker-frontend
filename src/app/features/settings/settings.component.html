@@ -1,1 +1,10 @@
-<p>settings works!</p>
+<div>
+  <p>{{ 'header.settings' | translate }}</p>
+  <p-dropdown [options]="translations.getAvailableLanguages()"
+              [formControl]="languageFormController"
+              optionValue="code"
+              optionLabel="name">
+  </p-dropdown>
+  <p-button (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
+  <p-button (click)="onSave()" [label]="'button.save' | translate" styleClass="p-button-success"></p-button>
+</div>

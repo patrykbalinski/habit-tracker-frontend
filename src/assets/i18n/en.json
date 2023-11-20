@@ -1,3 +1,24 @@
 {
+  "header": {
+    "new-habit": "new habit",
+    "edit": "edit",
+    "settings": "settings",
+    "report-issue": "report issue"
+  },
+  "button": {
+    "save": "save",
+    "cancel": "cancel",
+    "send": "send",
+    "edit": "edit",
+    "add": "add",
+    "add-occurrence": "add occurrence"
+  },
+  "occurrence": {
+    "start-date": "start date",
+    "end-date": "end date"
+  },
+  "report": {
+    "message": "issue description"
+  },
   "test.key": "test-en"
 }
