@@ -7,15 +7,15 @@ export const appRoutes: Routes = [
     loadComponent: () => import('@habits/habits.component').then(c => c.HabitsComponent)
   },
   {
-    path: 'habit-occurrence/:id',
+    path: 'habit/:id/occurrence',
     loadComponent: () => import('@habit-occurrence-adder/habit-occurrence-adder.component').then(c => c.HabitOccurrenceAdderComponent)
   },
   {
-    path: 'add-habit',
+    path: 'habit/new',
     loadComponent: () => import('@habits-editor/habits-editor.component').then(c => c.HabitsEditorComponent)
   },
   {
-    path: 'edit-habit/:id',
+    path: 'habit/:id/edit',
     loadComponent: () => import('@habits-editor/habits-editor.component').then(c => c.HabitsEditorComponent)
   },
   {

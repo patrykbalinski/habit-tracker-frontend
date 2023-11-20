@@ -10,7 +10,8 @@
       "@habits-statistics/*" : ["app/features/habits-statistics/*"],
       "@issue-reporter/*" : ["app/features/issue-reporter/*"],
       "@settings/*" : ["app/features/settings/*"],
-      "@navigation/*": ["app/features/navigation/*"]
+      "@navigation/*": ["app/features/navigation/*"],
+      "@shared/*": ["app/shared/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": false,

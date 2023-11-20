@@ -1,15 +1,15 @@
 <div>
   <p>{{habitName}}</p>
   <form [formGroup]="form">
-    <div>
-      <label htmlFor="startDate">Start</label>
-      <p-calendar dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="startDate"></p-calendar>
-    </div>
-    <div>
-      <label htmlFor="endDate">End</label>
-      <p-calendar dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="endDate"></p-calendar>
-    </div>
-    <p-button [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
-    <p-button [label]="'button.add' | translate" styleClass="p-button-success"></p-button>
+    <span class="p-float-label">
+      <p-calendar id="start-date" dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="startDate"></p-calendar>
+      <label for="start-date">{{ 'occurrence.start-date' | translate }}</label>
+    </span>
+    <span class="p-float-label">
+      <p-calendar id="end-date" dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="endDate"></p-calendar>
+      <label for="end-date">{{ 'occurrence.end-date' | translate }}</label>
+    </span>
+    <p-button (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
+    <p-button (click)="onAdd()" [label]="'button.add' | translate" styleClass="p-button-success"></p-button>
   </form>
 </div>
