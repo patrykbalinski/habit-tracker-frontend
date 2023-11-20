@@ -1,4 +1,22 @@
-<span>{{ habit.name }}</span>
+<!-- <span>{{ habit.name }}</span>
 <span>{{ habit.hours }}</span>
 <button (click)="edit.emit(habit.id)">{{ 'button.edit' | translate }}</button>
-<button (click)="addOccurrence.emit(habit.id)">{{ 'button.add-occurrence' | translate }}</button>
+<button (click)="addOccurrence.emit(habit.id)">{{ 'button.add-occurrence' | translate }}</button> -->
+<div class="habit-card">
+    <div class="habit-card-background " [style.background-color]="habit.bgColor">
+        <div class="habit-card-icon">
+            <span [class]="habit.icon"></span>
+        </div>
+    </div>
+    <div class="habit-card-inside">
+        <button class="button habit-card-edit-button" (click)="edit.emit(habit.id)">
+            <span class="pi pi-ellipsis-h"></span>
+        </button>
+        <div class="habit-card-header habit-card-name"><span>{{ habit.name }}</span></div>
+        <div class="habit-card-content habit-card-hours"><span>{{ habit.hours }} hours</span></div>
+        
+        <button class="button habit-card-add-occurrence" (click)="addOccurrence.emit(habit.id)">
+            <span class="pi pi-plus"></span>
+        </button>
+    </div>
+</div>

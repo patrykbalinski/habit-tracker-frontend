@@ -1,4 +1,40 @@
-// TODO to delete when styling
-.p-float-label {
-  margin-top: 30px;
+.nameHeader {
+  color: white;
+  font-size:3vh
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 25vh;
+  width: 40vw;
+  flex-direction: column;
+  min-width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.p-element {
+  width:80%;
+}
+
+.p-float-label{
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.button {
+  margin-left:2vb;
+  margin-right:2vb;
 }

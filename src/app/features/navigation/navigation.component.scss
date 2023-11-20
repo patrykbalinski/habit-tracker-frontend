@@ -1,0 +1,46 @@
+@import "primeicons/primeicons.css";
+
+:host ::ng-deep .p-sidebar {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+:host ::ng-deep .p-button {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-width: 0;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+:host ::ng-deep .p-button:hover {
+    background-color: rgba(85, 82, 82, 0.7);
+}
+
+.sidebar{
+    .navigation-element {
+        background-color: rgba(36, 34, 34, 0.8);
+        max-height: 40px;
+        border-radius: 20px;
+
+        a{
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+            text-decoration: none;
+        }
+    }
+    a {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a:hover {
+        color:gray;
+        font-size:larger;
+    }
+}

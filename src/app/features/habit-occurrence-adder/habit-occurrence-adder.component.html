@@ -1,5 +1,5 @@
-<div>
-  <p>{{habitName}}</p>
+<div class="card">
+  <p class="nameHeader">{{habitName}}</p>
   <form [formGroup]="form">
     <span class="p-float-label">
       <p-calendar id="start-date" dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="startDate"></p-calendar>
@@ -9,7 +9,9 @@
       <p-calendar id="end-date" dateFormat="dd.mm.yy" [showTime]="true" [showIcon]="true" [showButtonBar]="true" formControlName="endDate"></p-calendar>
       <label for="end-date">{{ 'occurrence.end-date' | translate }}</label>
     </span>
-    <p-button (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
-    <p-button (click)="onAdd()" [label]="'button.add' | translate" styleClass="p-button-success"></p-button>
+    <div class="buttonRow">
+      <p-button class="button" (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
+    <p-button class="button" (click)="onAdd()" [label]="'button.add' | translate" styleClass="p-button-success"></p-button>
+    </div>
   </form>
 </div>

@@ -1,9 +1,11 @@
-<app-habit
+<div class="habit-card-container">
+  <app-habit
   *ngFor="let habit of habitsStorage.habits$ | async"
   [habit]="habit"
   (edit)="editHabit($event)"
   (addOccurrence)="addHabitOccurrence($event)">
-</app-habit>
+  </app-habit>
+</div>
 
 <p>{{ 'test.key' | translate }}</p>
 

@@ -1,7 +1,31 @@
-<a [routerLink]="['', 'habits']">habits</a><br/>
-<a [routerLink]="['', 'habit', 1, 'occurrence']">habit-occurrence</a><br/>
-<a [routerLink]="['', 'habit', 'new']">add-habit</a><br/>
-<a [routerLink]="['', 'habit', 1, 'edit']">edit-habit/1</a><br/>
-<a [routerLink]="['', 'statistics']">statistics</a><br/>
-<a [routerLink]="['', 'report-issue']">report-issue</a><br/>
-<a [routerLink]="['', 'settings']">settings</a><br/>
+<div class="navigation">
+    <p-sidebar [(visible)]="display" position="left" class="sidebar-container">
+        <div class="sidebar">
+            <p class="navigation-element">
+                <a [routerLink]="['', 'habits']">habits</a><br/>
+            </p>
+            <p class="navigation-element">
+                <a [routerLink]="['', 'habit', 1, 'occurrence']">habit-occurrence</a><br/>
+            </p>
+            <p class="navigation-element">
+                <a [routerLink]="['', 'habit', 'new']">add-habit</a><br/>
+            </p>
+            <p class="navigation-element">
+                <a [routerLink]="['', 'habit', 1, 'edit']">edit-habit/1</a><br/>
+            </p>
+            <p class="navigation-element">
+                <a [routerLink]="['', 'statistics']">statistics</a><br/>
+            </p>
+            <p class="navigation-element">
+                <a [routerLink]="['', 'report-issue']">report-issue</a><br/>
+            </p>
+            <p class="navigation-element">
+                <a [routerLink]="['', 'settings']">settings</a><br/>
+            </p>
+        </div>
+    </p-sidebar>
+    
+    <p-button type="text" (click)="display = true" icon="pi pi-list" label="Menu">
+        <!-- <span class="pi pi-list"></span> -->
+    </p-button>
+</div>
