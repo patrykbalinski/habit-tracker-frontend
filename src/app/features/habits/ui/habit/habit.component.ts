@@ -2,12 +2,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Habit } from "@habits/interfaces/habit";
 import { TranslateModule } from "@ngx-translate/core";
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   standalone: true,
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    ButtonModule
   ],
   selector: 'app-habit',
   templateUrl: './habit.component.html',
