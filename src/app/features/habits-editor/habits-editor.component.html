@@ -10,25 +10,27 @@
       <label for="category">{{ 'habit-editor.category' | translate }}</label>
     </span>
     <p-divider></p-divider>
-    <span class="p-float-label">
-      <p-inputNumber id="goalHours" formControlName="goalHours" inputId="goalHours" [useGrouping]="false" [min]="0"></p-inputNumber>
-      <label for="goalHours">{{ 'habit-editor.goal-hours' | translate }}</label>
-    </span>
-    <span class="p-float-label">
-      <p-inputNumber id="goalMinutes" formControlName="goalMinutes" inputId="goalMinutes" [useGrouping]="false" [min]="0" [max]="60"></p-inputNumber>
-      <label for="goalMinutes">{{ 'habit-editor.goal-minutes' | translate }}</label>
-    </span>
+    <div class="timeInputRow">
       <span class="p-float-label">
-        <p-dropdown class="dropdown" id="goalFrequency" formControlName="goalFrequency" [options]="goalFrequency">
-          <ng-template pTemplate="selectedItem">
-            <div class="inputField">{{ ('habit-editor.frequency.' + this.form.controls['goalFrequency'].value.name) | translate }}</div>
-          </ng-template>
-          <ng-template let-frequency pTemplate="item">
-              <div>{{ ('habit-editor.frequency.' + frequency.name) | translate }}</div>
-          </ng-template>
-        </p-dropdown>
-        <label htmlFor="goalFrequency">{{ 'habit-editor.goal-frequency' | translate }}</label>
+        <p-inputNumber id="goalHours" formControlName="goalHours" inputId="goalHours" [useGrouping]="false" [min]="0"></p-inputNumber>
+        <label for="goalHours">{{ 'habit-editor.goal-hours' | translate }}</label>
       </span>
+      <span class="p-float-label">
+        <p-inputNumber id="goalMinutes" formControlName="goalMinutes" inputId="goalMinutes" [useGrouping]="false" [min]="0" [max]="60"></p-inputNumber>
+        <label for="goalMinutes">{{ 'habit-editor.goal-minutes' | translate }}</label>
+      </span>
+    </div>
+    <span class="p-float-label">
+      <p-dropdown id="goalFrequency" formControlName="goalFrequency" [options]="goalFrequency">
+        <ng-template pTemplate="selectedItem">
+          <div class="inputField">{{ ('habit-editor.frequency.' + this.form.controls['goalFrequency'].value.name) | translate }}</div>
+        </ng-template>
+        <ng-template let-frequency pTemplate="item">
+            <div>{{ ('habit-editor.frequency.' + frequency.name) | translate }}</div>
+        </ng-template>
+      </p-dropdown>
+      <label htmlFor="goalFrequency">{{ 'habit-editor.goal-frequency' | translate }}</label>
+    </span>
     
     <!-- </div> -->
     <div class="buttonRow">

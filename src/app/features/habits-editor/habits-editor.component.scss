@@ -33,12 +33,14 @@
   display: flex;
   justify-content: center;
 }
-.inputField {
-  width: 100%;
+
+.dropdown {
+  // max-width:28vw;
 }
 
-.dropdown  {
-  width:28vw;
+.timeInputRow {
+  margin-bottom: 5vh;
+
 }
 
 .buttonRow {

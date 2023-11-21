@@ -1,10 +1,13 @@
-<div>
+<div  class="card">
   <p>{{ 'header.settings' | translate }}</p>
-  <p-dropdown [options]="translations.getAvailableLanguages()"
+  <p-dropdown class="inputField" [options]="translations.getAvailableLanguages()"
               [formControl]="languageFormController"
               optionValue="code"
               optionLabel="name">
   </p-dropdown>
-  <p-button (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
-  <p-button (click)="onSave()" [label]="'button.save' | translate" styleClass="p-button-success"></p-button>
+  
+  <div class="buttonRow">
+    <p-button class="button" (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
+    <p-button class="button" (click)="onSave()" [label]="'button.save' | translate" styleClass="p-button-success"></p-button>
+  </div>
 </div>
