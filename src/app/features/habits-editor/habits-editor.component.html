@@ -1,5 +1,5 @@
-<div>
-  <p>{{isEditMode ? ('header.edit-habit' | translate) : ('header.new-habit' | translate)}}</p>
+<div class="card">
+  <p class="text">{{isEditMode ? ('header.edit-habit' | translate) : ('header.new-habit' | translate)}}</p>
   <form [formGroup]="form">
     <span class="p-float-label">
       <input pInputText id="name" type="text" formControlName="name" />
@@ -18,22 +18,26 @@
       <p-inputNumber id="goalMinutes" formControlName="goalMinutes" inputId="goalMinutes" [useGrouping]="false" [min]="0" [max]="60"></p-inputNumber>
       <label for="goalMinutes">{{ 'habit-editor.goal-minutes' | translate }}</label>
     </span>
-    <div>
-      <label htmlFor="goalFrequency">{{ 'habit-editor.goal-frequency' | translate }}</label>
-      <p-dropdown id="goalFrequency" formControlName="goalFrequency" [options]="goalFrequency">
-        <ng-template pTemplate="selectedItem">
-          <div>{{ ('habit-editor.frequency.' + this.form.controls['goalFrequency'].value.name) | translate }}</div>
-        </ng-template>
-        <ng-template let-frequency pTemplate="item">
-            <div>{{ ('habit-editor.frequency.' + frequency.name) | translate }}</div>
-        </ng-template>
-      </p-dropdown>
+      <span class="p-float-label">
+        <p-dropdown class="dropdown" id="goalFrequency" formControlName="goalFrequency" [options]="goalFrequency">
+          <ng-template pTemplate="selectedItem">
+            <div class="inputField">{{ ('habit-editor.frequency.' + this.form.controls['goalFrequency'].value.name) | translate }}</div>
+          </ng-template>
+          <ng-template let-frequency pTemplate="item">
+              <div>{{ ('habit-editor.frequency.' + frequency.name) | translate }}</div>
+          </ng-template>
+        </p-dropdown>
+        <label htmlFor="goalFrequency">{{ 'habit-editor.goal-frequency' | translate }}</label>
+      </span>
+    
+    <!-- </div> -->
+    <div class="buttonRow">
+      <p-button class="button" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
+      <p-button class="button" styleClass="p-button-success"
+                [label]="(isEditMode ? 'button.edit' : 'button.add') | translate"
+                [disabled]="form.invalid"
+                (click)="onUpdate()"
+      ></p-button>
     </div>
-    <p-button [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
-    <p-button styleClass="p-button-success"
-              [label]="(isEditMode ? 'button.edit' : 'button.add') | translate"
-              [disabled]="form.invalid"
-              (click)="onUpdate()"
-    ></p-button>
   </form>
 </div>

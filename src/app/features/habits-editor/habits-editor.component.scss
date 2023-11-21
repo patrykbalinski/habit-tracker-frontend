@@ -2,3 +2,54 @@
 .p-float-label {
   margin-top: 30px;
 }
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 7vh;
+  width: 40vw;
+  flex-direction: column;
+  min-width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.text {
+  color: white;
+  font-size:3vh
+}
+
+.label {
+  color: white;
+  font-size:2vh
+}
+
+.p-element {
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+.inputField {
+  width: 100%;
+}
+
+.dropdown  {
+  width:28vw;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.button {
+  margin-left:2vb;
+  margin-right:2vb;
+}
