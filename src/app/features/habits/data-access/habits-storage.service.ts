@@ -3,7 +3,9 @@ import { ApiHabitsService } from "@habits/data-access/api-habits.service";
 import { BehaviorSubject, finalize, Subject } from "rxjs";
 import { Habit } from "@habits/interfaces/habit";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HabitsStorageService {
 
   private apiHabits: ApiHabitsService = inject(ApiHabitsService);
@@ -23,5 +25,9 @@ export class HabitsStorageService {
         },
         error: () => this.habitSuccess$.next(false)
     })
+  }
+
+  public getHabitName(habitId: Habit['id']): Habit['name'] {
+    return this.habits$.value.find((habit: Habit) => habit.id === habitId)?.name;
   }
 }

@@ -1,12 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApiHabitsService } from "@habits/data-access/api-habits.service";
 import { HabitsStorageService } from "@habits/data-access/habits-storage.service";
 import { HabitComponent } from "@habits/ui/habit/habit.component";
 import { Habit } from "@habits/interfaces/habit";
 import { Router } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
-import { ToastService } from "../../shared/services/toast.service";
+import { ToastService } from "@shared/services/toast.service";
 import { MessageService } from "primeng/api";
 import { ToastModule } from "primeng/toast";
 
@@ -19,8 +18,6 @@ import { ToastModule } from "primeng/toast";
     ToastModule
   ],
   providers: [
-    ApiHabitsService,
-    HabitsStorageService,
     ToastService,
     MessageService
   ],
@@ -39,10 +36,10 @@ export class HabitsComponent implements OnInit{
   }
 
   public editHabit(habitId: Habit['id']): void {
-    this.router.navigate(['', 'edit-habit', habitId]).then();
+    this.router.navigate(['', 'habit', habitId, 'edit']).then();
   }
 
   public addHabitOccurrence(habitId: Habit['id']): void {
-    this.router.navigate(['', 'habit-occurrence', habitId]).then();
+    this.router.navigate(['', 'habit', habitId, 'occurrence']).then();
   }
 }

@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { delay, Observable, of } from "rxjs";
 import { Habit } from "@habits/interfaces/habit";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ApiHabitsService {
 
   public getHabits(): Observable<Habit[]> {

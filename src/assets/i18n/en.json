@@ -1,3 +1,36 @@
 {
+  "header": {
+    "new-habit": "new habit",
+    "edit-habit": "edit habit",
+    "settings": "settings",
+    "report-issue": "report issue"
+  },
+  "button": {
+    "save": "save",
+    "cancel": "cancel",
+    "send": "send",
+    "edit": "edit",
+    "add": "add",
+    "add-occurrence": "add occurrence"
+  },
+  "habit-editor": {
+    "name": "name",
+    "category": "category",
+    "goal-hours": "hours",
+    "goal-minutes": "minutes",
+    "goal-frequency": "frequency",
+    "frequency": {
+      "daily": "daily",
+      "weekly": "weekly",
+      "monthly": "monthly"
+    }
+  },
+  "occurrence": {
+    "start-date": "start date",
+    "end-date": "end date"
+  },
+  "report": {
+    "message": "issue description"
+  },
   "test.key": "test-en"
 }

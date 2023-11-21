@@ -4,9 +4,13 @@ import { BarChartComponent } from './ui/bar-chart/bar-chart.component';
 import { RadarChartComponent } from './ui/radar-chart/radar-chart.component';
 
 @Component({
-  selector: 'app-habits-statistics',
   standalone: true,
-  imports: [CommonModule, BarChartComponent, RadarChartComponent],
+  imports: [
+    CommonModule,
+    BarChartComponent,
+    RadarChartComponent
+  ],
+  selector: 'app-habits-statistics',
   templateUrl: './habits-statistics.component.html',
   styleUrls: ['./habits-statistics.component.scss'],
 })
