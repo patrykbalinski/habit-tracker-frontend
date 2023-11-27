@@ -5,10 +5,14 @@
   (edit)="editHabit($event)"
   (addOccurrence)="addHabitOccurrence($event)">
   </app-habit>
-</div>
 
-<div class="habit-card-container">
-  <span class="pi pi-plus" (click)="addHabit()"></span>
+  <div class="habit-card">
+    <div class="habit-card-background " style="background-color: white;">
+    </div>
+    <div class="habit-card-inside">
+        <span class="pi pi-plus" (click)="addHabit()"></span>
+    </div>
+  </div>
 </div>
 
 
