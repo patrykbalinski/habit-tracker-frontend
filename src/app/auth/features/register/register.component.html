@@ -1,0 +1,16 @@
+<div class="card">
+  <p class="text">{{'header.register' | translate}}</p>
+  <form [formGroup]="form">
+    <span class="p-float-label">
+      <input pInputText id="username" type="text" formControlName="username" />
+      <label for="username">{{ 'register.username' | translate }}</label>
+    </span>
+    <span class="p-float-label">
+      <p-password id="password" formControlName="password" [feedback]="false" [toggleMask]="true"></p-password>
+      <label for="password">{{ 'register.password' | translate }}</label>
+    </span>
+
+    <p-button class="button" styleClass="p-button-success" [label]="'button.register' | translate" (click)="onRegister()"></p-button>
+    <a [routerLink]="['', 'login']">{{ 'register.login' | translate }}</a><br/>
+  </form>
+</div>

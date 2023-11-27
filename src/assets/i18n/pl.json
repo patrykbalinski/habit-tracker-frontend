@@ -3,7 +3,9 @@
     "new-habit": "nowy nawyk",
     "edit-habit": "edycja nawyku",
     "settings": "ustawienia",
-    "report-issue": "zgłoś błąd"
+    "report-issue": "zgłoś błąd",
+    "login": "logowanie",
+    "register": "rejestracja"
   },
   "button": {
     "save": "zapisz",
@@ -11,7 +13,16 @@
     "send": "wyślij",
     "edit": "edytuj",
     "add": "dodaj",
-    "add-occurrence": "dodaj wystąpienie"
+    "add-occurrence": "dodaj wystąpienie",
+    "login": "zaloguj się",
+    "register": "zarejestruj się"
+  },
+  "navigation": {
+    "habits": "nawyki",
+    "statistics": "statystyki",
+    "report-issue": "zgłoś błąd",
+    "settings": "ustawienia",
+    "log-out": "wyloguj"
   },
   "habit-editor": {
     "name": "nazwa",
@@ -32,5 +43,9 @@
   "report": {
     "message": "opis błędu"
   },
-  "test.key": "test-pl"
+  "login": {
+    "username": "nazwa użytkownika",
+    "password": "hasło",
+    "register": "załóż konto"
+  }
 }

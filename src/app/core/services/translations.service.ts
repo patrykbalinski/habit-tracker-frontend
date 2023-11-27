@@ -1,4 +1,4 @@
-import {inject, Injectable} from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { Language } from "../interfaces/language";
 
@@ -10,8 +10,8 @@ export class TranslationsService {
   private translate: TranslateService = inject(TranslateService);
 
   private readonly availableLanguages: Language[] = [
-    { name: 'English', code: 'en'},
-    { name: 'Polski', code: 'pl'}
+    {name: 'English', code: 'en'},
+    {name: 'Polski', code: 'pl'}
   ]
 
   constructor() {
@@ -31,7 +31,7 @@ export class TranslationsService {
   }
 
   private initTranslations(): void {
-    const availableLanguages: string[] = this.availableLanguages.map( language => language.code);
+    const availableLanguages: string[] = this.availableLanguages.map(language => language.code);
     const browserLanguage: string = this.translate.getBrowserLang() as string;
 
     this.translate.addLangs(availableLanguages);

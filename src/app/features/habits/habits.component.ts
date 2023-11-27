@@ -35,6 +35,10 @@ export class HabitsComponent implements OnInit{
     this.habitsStorage.getHabits();
   }
 
+  public addHabit(): void {
+    this.router.navigate(['', 'habit', 'new']).then();
+  }
+
   public editHabit(habitId: Habit['id']): void {
     this.router.navigate(['', 'habit', habitId, 'edit']).then();
   }
