@@ -3,7 +3,9 @@
     "new-habit": "new habit",
     "edit-habit": "edit habit",
     "settings": "settings",
-    "report-issue": "report issue"
+    "report-issue": "report issue",
+    "login": "log in",
+    "register": "register"
   },
   "button": {
     "save": "save",
@@ -11,7 +13,16 @@
     "send": "send",
     "edit": "edit",
     "add": "add",
-    "add-occurrence": "add occurrence"
+    "add-occurrence": "add occurrence",
+    "login": "log in",
+    "register": "register"
+  },
+  "navigation": {
+    "habits": "habits",
+    "statistics": "statistics",
+    "report-issue": "report issue",
+    "settings": "settings",
+    "log-out": "log out"
   },
   "habit-editor": {
     "name": "name",
@@ -32,5 +43,9 @@
   "report": {
     "message": "issue description"
   },
-  "test.key": "test-en"
+  "login": {
+    "username": "username",
+    "password": "password",
+    "register": "create new account"
+  }
 }

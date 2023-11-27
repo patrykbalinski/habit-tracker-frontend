@@ -12,7 +12,8 @@
       "@settings/*" : ["app/features/settings/*"],
       "@navigation/*": ["app/features/navigation/*"],
       "@shared/*": ["app/shared/*"],
-      "@core/*": ["app/core/*"]
+      "@core/*": ["app/core/*"],
+      "@auth/*": ["app/auth/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": false,

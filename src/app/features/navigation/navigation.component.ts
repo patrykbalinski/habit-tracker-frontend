@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
-import {SidebarModule} from 'primeng/sidebar';
-import {ButtonModule} from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import { AuthStorageService } from "@auth/data-access/auth-storage.service";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   standalone: true,
@@ -10,13 +12,16 @@ import {ButtonModule} from 'primeng/button';
     CommonModule,
     RouterLink,
     SidebarModule,
-    ButtonModule
+    ButtonModule,
+    TranslateModule
   ],
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
-  inputs: ['display']
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  display: boolean;
+
+  protected authStorage: AuthStorageService = inject(AuthStorageService);
+
+  public isToolbarVisible: boolean = false;
 }

@@ -1,31 +1,22 @@
 <div class="navigation">
-    <p-sidebar [(visible)]="display" position="left" class="sidebar-container">
-        <div class="sidebar">
+    <p-sidebar [(visible)]="isToolbarVisible" position="left" class="sidebar-container">
+        <div class="sidebar" (click)="isToolbarVisible = false">
             <p class="navigation-element">
-                <a [routerLink]="['', 'habits']">habits</a><br/>
+                <a [routerLink]="['', 'habits']">{{ 'navigation.habits' | translate }}</a><br/>
             </p>
             <p class="navigation-element">
-                <a [routerLink]="['', 'habit', 1, 'occurrence']">habit-occurrence</a><br/>
+                <a [routerLink]="['', 'statistics']">{{ 'navigation.statistics' | translate }}</a><br/>
             </p>
             <p class="navigation-element">
-                <a [routerLink]="['', 'habit', 'new']">add-habit</a><br/>
+                <a [routerLink]="['', 'report-issue']">{{ 'navigation.report-issue' | translate }}</a><br/>
             </p>
             <p class="navigation-element">
-                <a [routerLink]="['', 'habit', 1, 'edit']">edit-habit/1</a><br/>
+                <a [routerLink]="['', 'settings']">{{ 'navigation.settings' | translate }}</a><br/>
             </p>
-            <p class="navigation-element">
-                <a [routerLink]="['', 'statistics']">statistics</a><br/>
-            </p>
-            <p class="navigation-element">
-                <a [routerLink]="['', 'report-issue']">report-issue</a><br/>
-            </p>
-            <p class="navigation-element">
-                <a [routerLink]="['', 'settings']">settings</a><br/>
-            </p>
+
+            <button (click)="authStorage.logOut()">{{ 'navigation.log-out' | translate }}</button>
         </div>
     </p-sidebar>
-    
-    <p-button type="text" (click)="display = true" icon="pi pi-list" label="Menu">
-        <!-- <span class="pi pi-list"></span> -->
-    </p-button>
+
+    <p-button type="text" (click)="isToolbarVisible = true" icon="pi pi-list" label="Menu"></p-button>
 </div>

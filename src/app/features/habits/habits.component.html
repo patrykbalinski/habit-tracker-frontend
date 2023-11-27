@@ -7,7 +7,10 @@
   </app-habit>
 </div>
 
-<p>{{ 'test.key' | translate }}</p>
+<div class="habit-card-container">
+  <span class="pi pi-plus" (click)="addHabit()"></span>
+</div>
+
 
 <button (click)="toast.showSuccess('success', 'Success Message')">show success</button>
 <button (click)="toast.showError('error', 'Error Message')">show error</button>
