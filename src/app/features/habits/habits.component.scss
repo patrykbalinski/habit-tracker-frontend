@@ -1,13 +1,15 @@
 .habit-card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding-left: 5%;
-    padding-right: 5%;
+    // justify-content: space-around;
+    padding-left: 8%;
+    padding-right: 8%;
+    // margin: 0 auto;
+    justify-content: space-between;
 }
 
 .habit-card-container > * {
-    width: 30%;
+    width: 26%;
     margin: 10px;
     min-width: 200px;
 }
