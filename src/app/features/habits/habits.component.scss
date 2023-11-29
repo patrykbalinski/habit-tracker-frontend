@@ -6,12 +6,12 @@
     padding-right: 8%;
     // margin: 0 auto;
     justify-content: space-between;
-}
 
-.habit-card-container > * {
-    width: 26%;
-    margin: 10px;
-    min-width: 200px;
+    & > * {
+        width: 26%;
+        margin: 10px;
+        min-width: 200px;
+    }
 }
 
 .habit-card {
@@ -58,7 +58,7 @@
     :hover {
         color:gray;
         font-size:72px;
-        }
+    }
 }
 
 .habit-card-header {

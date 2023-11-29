@@ -2,19 +2,22 @@
     <p-sidebar [(visible)]="isToolbarVisible" position="left" class="sidebar-container">
         <div class="sidebar" (click)="isToolbarVisible = false">
             <p class="navigation-element">
-                <a [routerLink]="['', 'habits']">{{ 'navigation.habits' | translate }}</a><br/>
+                <a [routerLink]="['', 'habits']">{{ 'navigation.habits' | translate }}</a>
             </p>
             <p class="navigation-element">
-                <a [routerLink]="['', 'statistics']">{{ 'navigation.statistics' | translate }}</a><br/>
+                <a [routerLink]="['', 'statistics']">{{ 'navigation.statistics' | translate }}</a>
             </p>
             <p class="navigation-element">
-                <a [routerLink]="['', 'report-issue']">{{ 'navigation.report-issue' | translate }}</a><br/>
+                <a [routerLink]="['', 'report-issue']">{{ 'navigation.report-issue' | translate }}</a>
             </p>
             <p class="navigation-element">
-                <a [routerLink]="['', 'settings']">{{ 'navigation.settings' | translate }}</a><br/>
+                <a [routerLink]="['', 'settings']">{{ 'navigation.settings' | translate }}</a>
             </p>
 
-            <button (click)="authStorage.logOut()">{{ 'navigation.log-out' | translate }}</button>
+            <p class="navigation-element">
+                <a (click)="authStorage.logOut()">{{ 'navigation.log-out' | translate }}</a>
+            </p>
+            
         </div>
     </p-sidebar>
 
