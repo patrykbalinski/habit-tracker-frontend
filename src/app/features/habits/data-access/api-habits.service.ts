@@ -12,11 +12,6 @@ export class ApiHabitsService {
   }
 }
 
-// export const HABITS: Habit[] = [
-//   { id: 1, name: 'work', hours: 32 },
-//   { id: 2, name: 'play', hours: 16 },
-//   { id: 3, name: 'workout', hours: 4 }
-// ]
 export const HABITS: Habit[] = [
   { id: 1, name: 'Work', hours: 32, bgColor: "#AEFFAC", icon: "pi pi-briefcase"},
   { id: 2, name: 'Play', hours: 16 , bgColor: "#FFACAC", icon: "pi pi-play" },

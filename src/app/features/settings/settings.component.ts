@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from "primeng/button";
 import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TranslateModule } from "@ngx-translate/core";
-import { Router } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { DropdownModule } from "primeng/dropdown";
 import { Language } from "@core/interfaces/language";
 import { TranslationsService } from "@core/services/translations.service";
@@ -18,7 +18,8 @@ import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
     ReactiveFormsModule,
     TranslateModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   selector: 'app-settings',
   templateUrl: './settings.component.html',

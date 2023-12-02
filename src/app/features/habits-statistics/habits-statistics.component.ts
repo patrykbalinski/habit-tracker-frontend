@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BarChartComponent } from './ui/bar-chart/bar-chart.component';
 import { RadarChartComponent } from './ui/radar-chart/radar-chart.component';
+import { RouterLink } from "@angular/router";
 
 @Component({
   standalone: true,
   imports: [
     CommonModule,
     BarChartComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    RouterLink
   ],
   selector: 'app-habits-statistics',
   templateUrl: './habits-statistics.component.html',

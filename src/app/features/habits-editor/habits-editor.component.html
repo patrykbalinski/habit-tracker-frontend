@@ -1,22 +1,37 @@
 <div class="big-feature-card">
+  <span class="card__close-btn pi pi-times" [routerLink]="['']"></span>
+
   <p class="text">{{isEditMode ? ('header.edit-habit' | translate) : ('header.new-habit' | translate)}}</p>
   <form [formGroup]="form">
     <span class="p-float-label">
-      <input pInputText id="name" type="text" formControlName="name" />
+      <input pInputText id="name" type="text" formControlName="name"/>
       <label for="name">{{ 'habit-editor.name' | translate }}</label>
     </span>
     <span class="p-float-label">
-      <input pInputText id="category" type="text" formControlName="category" />
+      <p-dropdown id="category" class="inputField" [options]="habitsEditorStorage.habitsCategories$ | async" formControlName="category"></p-dropdown>
       <label for="category">{{ 'habit-editor.category' | translate }}</label>
     </span>
     <p-divider></p-divider>
     <div class="timeInputRow">
       <span class="p-float-label">
-        <p-inputNumber id="goalHours" formControlName="goalHours" inputId="goalHours" [useGrouping]="false" [min]="0"></p-inputNumber>
+        <p-inputNumber
+          id="goalHours"
+          formControlName="goalHours"
+          inputId="goalHours"
+          [useGrouping]="false"
+          [min]="0">
+        </p-inputNumber>
         <label for="goalHours">{{ 'habit-editor.goal-hours' | translate }}</label>
       </span>
       <span class="p-float-label">
-        <p-inputNumber id="goalMinutes" formControlName="goalMinutes" inputId="goalMinutes" [useGrouping]="false" [min]="0" [max]="60"></p-inputNumber>
+        <p-inputNumber
+          id="goalMinutes"
+          formControlName="goalMinutes"
+          inputId="goalMinutes"
+          [useGrouping]="false"
+          [min]="0"
+          [max]="60">
+        </p-inputNumber>
         <label for="goalMinutes">{{ 'habit-editor.goal-minutes' | translate }}</label>
       </span>
     </div>
@@ -26,19 +41,25 @@
           <div class="inputField">{{ ('habit-editor.frequency.' + this.form.controls['goalFrequency'].value.name) | translate }}</div>
         </ng-template>
         <ng-template let-frequency pTemplate="item">
-            <div>{{ ('habit-editor.frequency.' + frequency.name) | translate }}</div>
+          <div>{{ ('habit-editor.frequency.' + frequency.name) | translate }}</div>
         </ng-template>
       </p-dropdown>
       <label htmlFor="goalFrequency">{{ 'habit-editor.goal-frequency' | translate }}</label>
     </span>
-    
+
     <div class="buttonRow">
-      <p-button class="button" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
-      <p-button class="button" styleClass="p-button-success"
-                [label]="(isEditMode ? 'button.edit' : 'button.add') | translate"
-                [disabled]="form.invalid"
-                (click)="onUpdate()"
-      ></p-button>
+      <p-button
+        class="button"
+        styleClass="p-button-danger"
+        [routerLink]="['']"
+        [label]="'button.cancel' | translate"></p-button>
+      <p-button
+        class="button"
+        styleClass="p-button-success"
+        [label]="(isEditMode ? 'button.edit' : 'button.add') | translate"
+        [disabled]="form.invalid"
+        (click)="onUpdate()">
+      </p-button>
     </div>
   </form>
 </div>

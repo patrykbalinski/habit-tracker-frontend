@@ -1,0 +1,85 @@
+:root {
+  --white-color: yellow;
+}
+
+.main-wrapper {
+  background-image: url("/assets/images/dark-background.jpg") !important;
+}
+
+app-habit .habit-card-background,
+.habit-card__header {
+  background-color: yellow !important;
+}
+
+span.pi,
+p,
+a,
+.p-sidebar-close,
+label{
+  color: yellow !important;
+}
+
+button.p-button {
+  background-color: yellow !important;
+  color: black !important;
+  border-color: yellow !important;
+}
+
+button.p-button  > span.pi,
+.habit-card-icon > span.pi {
+  color: black !important
+}
+
+p-dropdown .p-dropdown {
+  background: black;
+  border: 3px solid yellow;
+}
+
+p-dropdown .p-element,
+p-dropdown .p-dropdown-trigger {
+  color: yellow !important
+}
+
+textarea {
+  border: 4px solid yellow !important;
+  background-color: black !important;
+  box-shadow: none;
+}
+
+.p-dropdown-items-wrapper .p-dropdown-items {
+  background-color: black !important;
+}
+
+p-dropdownitem li {
+  background-color: black !important;
+}
+
+p-dropdownitem:hover > li {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+input {
+  background-color: black !important;
+  border: 3px solid yellow !important;
+  color: yellow !important;
+}
+
+eyeicon {
+  color: yellow !important;
+}
+
+.card,
+.stats-card,
+.auth-card {
+  border: 2px solid yellow;
+}
+
+.card__close-btn {
+  border: 2px solid yellow;
+  background: black
+}
+
+p-divider .p-divider:before {
+  border-color: yellow !important;
+}

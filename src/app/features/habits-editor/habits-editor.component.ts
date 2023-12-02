@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, RouterLink } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
 import { ButtonModule } from "primeng/button";
 import { CalendarModule } from "primeng/calendar";
@@ -9,6 +9,8 @@ import { InputTextModule } from "primeng/inputtext";
 import { DividerModule } from "primeng/divider";
 import { InputNumberModule } from "primeng/inputnumber";
 import { DropdownModule } from "primeng/dropdown";
+import { ApiHabitsEditorService } from "@habits-editor/data-access/api-habits-editor.service";
+import { HabitsEditorStorageService } from "@habits-editor/data-access/habits-editor-storage.service";
 
 @Component({
   standalone: true,
@@ -21,7 +23,12 @@ import { DropdownModule } from "primeng/dropdown";
     InputTextModule,
     DividerModule,
     InputNumberModule,
-    DropdownModule
+    DropdownModule,
+    RouterLink
+  ],
+  providers: [
+    ApiHabitsEditorService,
+    HabitsEditorStorageService
   ],
   selector: 'app-habits-editor',
   templateUrl: './habits-editor.component.html',
@@ -30,6 +37,7 @@ import { DropdownModule } from "primeng/dropdown";
 export class HabitsEditorComponent implements OnInit {
 
   private activatedRoute: ActivatedRoute = inject(ActivatedRoute);
+  protected habitsEditorStorage: HabitsEditorStorageService = inject(HabitsEditorStorageService);
 
   public isEditMode: boolean = !!this.activatedRoute.snapshot.params['id'];
   public form: FormGroup;
@@ -41,6 +49,7 @@ export class HabitsEditorComponent implements OnInit {
 
   public ngOnInit(): void {
     this.createForm();
+    this.habitsEditorStorage.getHabitsCategories();
   }
 
   private createForm(): void {

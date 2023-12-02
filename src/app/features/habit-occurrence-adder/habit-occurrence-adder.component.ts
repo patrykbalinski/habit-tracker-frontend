@@ -2,7 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { CalendarModule } from "primeng/calendar";
-import { ActivatedRoute, ParamMap, Router } from "@angular/router";
+import { ActivatedRoute, ParamMap, Router, RouterLink } from "@angular/router";
 import { map } from "rxjs";
 import { HabitsStorageService } from "@habits/data-access/habits-storage.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
@@ -19,7 +19,8 @@ import { InputTextareaModule } from "primeng/inputtextarea";
     CalendarModule,
     TranslateModule,
     ButtonModule,
-    InputTextareaModule
+    InputTextareaModule,
+    RouterLink
   ],
   selector: 'app-habit-occurrence-adder',
   templateUrl: './habit-occurrence-adder.component.html',

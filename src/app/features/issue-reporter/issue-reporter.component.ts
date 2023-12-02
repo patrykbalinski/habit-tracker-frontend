@@ -4,7 +4,7 @@ import {ButtonModule} from "primeng/button";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {TranslateModule} from "@ngx-translate/core";
 import {InputTextareaModule} from "primeng/inputtextarea";
-import {Router} from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 
 @Component({
   standalone: true,
@@ -13,7 +13,8 @@ import {Router} from "@angular/router";
     ButtonModule,
     ReactiveFormsModule,
     TranslateModule,
-    InputTextareaModule
+    InputTextareaModule,
+    RouterLink
   ],
   selector: 'app-issue-reporter',
   templateUrl: './issue-reporter.component.html',

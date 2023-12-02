@@ -1,0 +1,78 @@
+:host {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.access-customization-toggle-btn {
+  position: absolute;
+  left: -60px;
+  top: 100px;
+  transition: left .3s;
+  z-index: 10;
+
+  &::ng-deep button {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: none;
+    width: 60px;
+    height: 55px;
+
+    span {
+      font-size: 25px;
+    }
+  }
+
+  &--opened {
+    left: -320px;
+  }
+}
+
+.access-customization-wrapper {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 260px;
+  transition: left .3s;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  border-bottom-left-radius: 10px;
+  z-index: 10;
+
+  &--opened {
+    left: -260px;
+  }
+}
+
+.access-customization {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  &__image {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__icon {
+    font-size: 25px;
+    color: var(--white-color);
+  }
+
+  &__text {
+    color: var(--white-color);
+  }
+}

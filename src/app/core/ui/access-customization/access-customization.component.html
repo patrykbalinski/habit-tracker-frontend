@@ -1,0 +1,35 @@
+<p-button
+  type="text"
+  icon="pi pi-user"
+  class="access-customization-toggle-btn"
+  [class.access-customization-toggle-btn--opened]="isAccessCustomizationOpened"
+  (click)="toggleAccessCustomizationWindow()">
+</p-button>
+
+
+<div class="access-customization-wrapper" [class.access-customization-wrapper--opened]="isAccessCustomizationOpened">
+  <div class="access-customization" (click)="removeThemes(); loadDefaultTheme()">
+    <span class="access-customization__icon pi pi-refresh"></span>
+
+    <span class="access-customization__text">DOMYŚLNE</span>
+  </div>
+
+  <div class="access-customization" (click)="removeThemes(); loadYellowBlackContractTheme()">
+    <img class="access-customization__image" src="assets/images/yellow-black-contrast.png" alt="">
+
+    <span class="access-customization__text">YELLOW CONTRAST</span>
+  </div>
+
+  <div class="access-customization" (click)="increaseFontSize()">
+    <span class="access-customization__icon pi pi-plus"></span>
+
+    <span class="access-customization__text">TEXT PLUS</span>
+  </div>
+
+  <div class="access-customization" (click)="decreaseFontSize()">
+    <span class="access-customization__icon pi pi-minus"></span>
+
+    <span class="access-customization__text">TEXT MINUS</span>
+  </div>
+</div>
+

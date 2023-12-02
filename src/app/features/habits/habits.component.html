@@ -7,17 +7,11 @@
   </app-habit>
 
   <div class="habit-card">
-    <div class="habit-card-background " style="background-color: white;">
-    </div>
-    <div class="habit-card-inside">
-        <span class="pi pi-plus" (click)="addHabit()"></span>
+    <div class="habit-card__header"></div>
+    <div class="habit-card__content" (click)="addHabit()">
+      <span class="pi pi-plus"></span>
     </div>
   </div>
 </div>
 
-
-<button (click)="toast.showSuccess('success', 'Success Message')">show success</button>
-<button (click)="toast.showError('error', 'Error Message')">show error</button>
-<button (click)="toast.showInfo('info', 'Info Message')">show info</button>
-<button (click)="toast.showWarning('warning', 'Warning Message')">show warning</button>
 <p-toast></p-toast>

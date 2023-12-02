@@ -1,11 +1,13 @@
-<div  class="card">
+<div class="card">
+  <span class="card__close-btn pi pi-times" [routerLink]="['']"></span>
+
   <p class="text">{{ 'header.settings' | translate }}</p>
   <p-dropdown class="inputField" [options]="translations.getAvailableLanguages()"
               [formControl]="languageFormController"
               optionValue="code"
               optionLabel="name">
   </p-dropdown>
-  
+
   <div class="buttonRow">
     <p-button class="button" (click)="onCancel()" [label]="'button.cancel' | translate" styleClass="p-button-danger"></p-button>
     <p-button class="button" (click)="onSave()" [label]="'button.save' | translate" styleClass="p-button-success"></p-button>
